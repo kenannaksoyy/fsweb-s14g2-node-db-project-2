@@ -1,5 +1,5 @@
 // ESNEK
-const cars = [
+const defaultCars = [
     {
       vin: '123',
       make: 'Toyata',
@@ -9,7 +9,7 @@ const cars = [
       transmission: 'CVT',
     },
     {
-      vin: '22222222222222222',
+      vin: '3162',
       make: 'Ford',
       model: 'Mustang',
       mileage: 120000,
@@ -17,7 +17,7 @@ const cars = [
       transmission: 'manual',
     },
     {
-      vin: '33333333333333333',
+      vin: '532',
       make: 'Nissan',
       model: 'Silvya',
       mileage: 220000,
@@ -29,6 +29,6 @@ const cars = [
 exports.seed = async function (knex) {
     // Deletes ALL existing entries
     await knex("cars").truncate();
-    await knex("cars").insert(cars);
+    await knex("cars").insert(defaultCars);
 };
 //npm install -g knex
